@@ -34,10 +34,10 @@ Free code signing provided by [SignPath.io](https://about.signpath.io), certific
 - Коммиттеры и ревьюеры: [Twofoo](https://github.com/Twofoo)
 - Утверждающие: [Twofoo](https://github.com/Twofoo)
 
-Отчёты VirusTotal для сборок 1.0.1:
+Отчёты VirusTotal для сборок 1.0.2 (хеши совпадают с `SHA256SUMS.txt`):
 
-- [Portable-версия](https://www.virustotal.com/gui/file/921ce12deea25bd1e91bec5c0555901355840529e1e6b47bf82e86ad19662011)
-- [Установщик](https://www.virustotal.com/gui/file/5bef2139d983a833e495e62db275491f1499ab25c5a0bbc6a8d31441ad20e18e)
+- [Portable-версия](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838)
+- [Установщик](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee)
 
 ## Что это?
 
