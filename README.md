@@ -29,12 +29,10 @@ Free code signing provided by [SignPath.io](https://about.signpath.io), certific
 - Committers and reviewers: [Twofoo](https://github.com/Twofoo)
 - Approvers: [Twofoo](https://github.com/Twofoo)
 
+VirusTotal reports for the 1.0.1 binaries:
 
-
-Virustotal Porbable version: https://www.virustotal.com/gui/file/921ce12deea25bd1e91bec5c0555901355840529e1e6b47bf82e86ad19662011/detection
-
-Virustotal Setup verion: https://www.virustotal.com/gui/file/5bef2139d983a833e495e62db275491f1499ab25c5a0bbc6a8d31441ad20e18e?nocache=1
-
+- [Portable build](https://www.virustotal.com/gui/file/921ce12deea25bd1e91bec5c0555901355840529e1e6b47bf82e86ad19662011)
+- [Installer](https://www.virustotal.com/gui/file/5bef2139d983a833e495e62db275491f1499ab25c5a0bbc6a8d31441ad20e18e)
 
 ## What is it?
 
@@ -125,13 +123,6 @@ check the build provenance:
 ```bash
 gh attestation verify "PoE Atlas Docs Setup 1.0.1.exe" --repo Twofoo/poe-atlas-docs
 ```
-
-## Code signing policy
-
-Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
-
-- Committers and reviewers: [@Twofoo](https://github.com/Twofoo)
-- Approvers: [@Twofoo](https://github.com/Twofoo)
 
 ## Privacy
 
