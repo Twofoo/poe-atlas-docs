@@ -22,12 +22,7 @@
 </p>
 
 ---
-## Code signing policy
 
-Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
-
-- Committers and reviewers: [Twofoo](https://github.com/Twofoo)
-- Approvers: [Twofoo](https://github.com/Twofoo)
 
 VirusTotal reports for the 1.0.1 binaries:
 
