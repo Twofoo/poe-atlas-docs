@@ -76,10 +76,6 @@ jobs:
           generate_release_notes: true
           append_body: true
           body: |
-            ## Code signing policy
-
-            Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
-
             ## Verifying your download
 
             Every file has a SHA-256 hash in `SHA256SUMS.txt`. To check your download:

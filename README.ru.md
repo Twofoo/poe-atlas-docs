@@ -27,18 +27,6 @@
 
 ---
 
-## Code signing policy
-
-Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
-
-- Коммиттеры и ревьюеры: [Twofoo](https://github.com/Twofoo)
-- Утверждающие: [Twofoo](https://github.com/Twofoo)
-
-Отчёты VirusTotal для сборок 1.0.2 (хеши совпадают с `SHA256SUMS.txt`):
-
-- [Portable-версия](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838)
-- [Установщик](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee)
-
 ## Что это?
 
 **PoE Atlas Docs** — бесплатное приложение для Windows для игроков в Path of Exile 1, которые серьёзно подходят к планированию фарма.
@@ -127,6 +115,11 @@ Get-FileHash ".\PoE.Atlas.Docs.Setup.1.0.2.exe" -Algorithm SHA256
 ```bash
 gh attestation verify "PoE.Atlas.Docs.Setup.1.0.2.exe" --repo Twofoo/poe-atlas-docs
 ```
+
+Отчёты VirusTotal для сборок 1.0.2 (хеши совпадают с `SHA256SUMS.txt`):
+
+- [Portable-версия](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838)
+- [Установщик](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee)
 
 ## Приватность
 

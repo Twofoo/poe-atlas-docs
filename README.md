@@ -27,18 +27,6 @@
 
 ---
 
-## Code signing policy
-
-Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
-
-- Committers and reviewers: [Twofoo](https://github.com/Twofoo)
-- Approvers: [Twofoo](https://github.com/Twofoo)
-
-VirusTotal reports for the 1.0.2 binaries (the hashes match `SHA256SUMS.txt`):
-
-- [Portable build](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838)
-- [Installer](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee)
-
 ## What is it?
 
 **PoE Atlas Docs** is a free Windows app for Path of Exile 1 players who plan their mapping strategies seriously.
@@ -128,6 +116,11 @@ check the build provenance:
 ```bash
 gh attestation verify "PoE.Atlas.Docs.Setup.1.0.2.exe" --repo Twofoo/poe-atlas-docs
 ```
+
+VirusTotal reports for the 1.0.2 binaries (the hashes match `SHA256SUMS.txt`):
+
+- [Portable build](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838)
+- [Installer](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee)
 
 ## Privacy
 
