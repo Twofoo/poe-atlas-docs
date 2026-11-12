@@ -5,6 +5,10 @@
 <h1 align="center">PoE Atlas Docs</h1>
 
 <p align="center">
+  <a href="README.md"><b>English</b></a> · <a href="README.ru.md">Русский</a>
+</p>
+
+<p align="center">
   <b>A desktop companion for Path of Exile 1</b> — plan your Atlas passive tree, keep farming notes and loot sheets,<br/>
   and share everything with a single short link.
 </p>
@@ -23,6 +27,12 @@
 
 ---
 
+## Code signing policy
+
+Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
+
+- Committers and reviewers: [Twofoo](https://github.com/Twofoo)
+- Approvers: [Twofoo](https://github.com/Twofoo)
 
 VirusTotal reports for the 1.0.1 binaries:
 

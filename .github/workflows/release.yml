@@ -93,3 +93,17 @@ jobs:
             ```bash
             gh attestation verify "PoE.Atlas.Docs.Setup.x.y.z.exe" --repo Twofoo/poe-atlas-docs
             ```
+
+            ## Проверка загрузки
+
+            SHA-256 каждого файла лежит в `SHA256SUMS.txt`. Сверьте хеш:
+
+            ```powershell
+            Get-FileHash ".\PoE.Atlas.Docs.Setup.x.y.z.exe" -Algorithm SHA256
+            ```
+
+            Сборка идёт в GitHub Actions, происхождение можно проверить:
+
+            ```bash
+            gh attestation verify "PoE.Atlas.Docs.Setup.x.y.z.exe" --repo Twofoo/poe-atlas-docs
+            ```
