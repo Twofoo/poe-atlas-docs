@@ -32,7 +32,9 @@ jobs:
         run: npm test
 
       - name: Build installer and portable exe
-        run: npm run dist
+        run: |
+          npm run build
+          npx electron-builder --win --publish never
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
 
