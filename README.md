@@ -23,6 +23,11 @@
 
 ---
 
+Virustotal Porbable version: https://www.virustotal.com/gui/file/921ce12deea25bd1e91bec5c0555901355840529e1e6b47bf82e86ad19662011/detection
+
+Virustotal Setup verion: https://www.virustotal.com/gui/file/5bef2139d983a833e495e62db275491f1499ab25c5a0bbc6a8d31441ad20e18e?nocache=1
+
+
 ## What is it?
 
 **PoE Atlas Docs** is a free Windows app for Path of Exile 1 players who plan their mapping strategies seriously.
@@ -175,8 +180,6 @@ Electron · React · Vite · HTML5 Canvas · TipTap / ProseMirror · Fortune-she
 
 This is a fan-made tool. It is **not affiliated with or endorsed by Grinding Gear Games**.
 
-Virustotal Porbable version: https://www.virustotal.com/gui/file/921ce12deea25bd1e91bec5c0555901355840529e1e6b47bf82e86ad19662011/detection
-Virustotal Setup verion: https://www.virustotal.com/gui/file/5bef2139d983a833e495e62db275491f1499ab25c5a0bbc6a8d31441ad20e18e?nocache=1
 
 
 ## License
