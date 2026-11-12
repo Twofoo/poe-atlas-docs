@@ -22,6 +22,14 @@
 </p>
 
 ---
+## Code signing policy
+
+Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
+
+- Committers and reviewers: [Twofoo](https://github.com/Twofoo)
+- Approvers: [Twofoo](https://github.com/Twofoo)
+
+
 
 Virustotal Porbable version: https://www.virustotal.com/gui/file/921ce12deea25bd1e91bec5c0555901355840529e1e6b47bf82e86ad19662011/detection
 
