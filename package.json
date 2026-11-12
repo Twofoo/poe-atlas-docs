@@ -1,7 +1,7 @@
 {
   "name": "poe-atlas-docs",
   "productName": "PoE Atlas Docs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Path of Exile 1 companion: atlas passive tree planner, Word/Excel-style notes and shareable short links",
   "main": "electron/main.cjs",
   "author": "Twofoo",
