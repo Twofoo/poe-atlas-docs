@@ -96,8 +96,8 @@ Fonts are bundled, so the app works fully offline.
 ## Download & install
 
 1. Go to **[Releases](../../releases/latest)** and download one of:
-   - `PoE Atlas Docs Setup x.y.z.exe` — installer (creates Start-menu and desktop shortcuts, registers `poeatlas://` links);
-   - `PoE Atlas Docs x.y.z Portable.exe` — portable version, no installation needed.
+   - `PoE.Atlas.Docs.Setup.x.y.z.exe` — installer (creates Start-menu and desktop shortcuts, registers `poeatlas://` links);
+   - `PoE.Atlas.Docs.x.y.z.Portable.exe` — portable version, no installation needed.
 2. The app is not code-signed yet, so Windows SmartScreen may show *“Windows protected your PC”*.
    Click **More info → Run anyway**.
 
@@ -109,14 +109,14 @@ Every release ships a `SHA256SUMS.txt` next to the installers. To check that the
 is the one that was built:
 
 ```powershell
-Get-FileHash ".\PoE Atlas Docs Setup 1.0.1.exe" -Algorithm SHA256
+Get-FileHash ".\PoE.Atlas.Docs.Setup.1.0.2.exe" -Algorithm SHA256
 ```
 
 Compare the hash with `SHA256SUMS.txt`. The releases are built in GitHub Actions, so you can also
 check the build provenance:
 
 ```bash
-gh attestation verify "PoE Atlas Docs Setup 1.0.1.exe" --repo Twofoo/poe-atlas-docs
+gh attestation verify "PoE.Atlas.Docs.Setup.1.0.2.exe" --repo Twofoo/poe-atlas-docs
 ```
 
 ## Privacy

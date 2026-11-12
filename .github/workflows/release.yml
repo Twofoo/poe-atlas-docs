@@ -85,11 +85,11 @@ jobs:
             Every file has a SHA-256 hash in `SHA256SUMS.txt`. To check your download:
 
             ```powershell
-            Get-FileHash ".\PoE Atlas Docs Setup x.y.z.exe" -Algorithm SHA256
+            Get-FileHash ".\PoE.Atlas.Docs.Setup.x.y.z.exe" -Algorithm SHA256
             ```
 
             The releases are built in GitHub Actions, so you can also verify the build provenance:
 
             ```bash
-            gh attestation verify "PoE Atlas Docs Setup x.y.z.exe" --repo Twofoo/poe-atlas-docs
+            gh attestation verify "PoE.Atlas.Docs.Setup.x.y.z.exe" --repo Twofoo/poe-atlas-docs
             ```
