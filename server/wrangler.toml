@@ -1,0 +1,9 @@
+# Cloudflare Worker for short links. Setup guide: server/README.md
+name = "poeatlas-links"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[[kv_namespaces]]
+binding = "LINKS"
+# id from: npx wrangler kv namespace create LINKS
+id = "08a99ac8cbfa43ca817ddfc3deba9c3c"

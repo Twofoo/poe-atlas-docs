@@ -1,0 +1,212 @@
+/* =====================================================================
+   Тема «Atlas Forge» — по макету в Figma «PoE Atlas Docs — UI Style».
+   Тёмный кованый металл, золотая окантовка, антиква Cormorant для заголовков,
+   Inter для текста. Слой поверх styles.css: меняет только внешний вид.
+   ===================================================================== */
+
+@font-face { font-family: 'Inter'; src: url('./fonts/Inter.ttf') format('truetype'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Cormorant Garamond'; src: url('./fonts/CormorantGaramond.ttf') format('truetype'); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: 'Cormorant SC'; src: url('./fonts/CormorantSC-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
+:root {
+  --bg: #0a0a0d;
+  --bg2: #0e0d12;
+  --panel: #15131a;
+  --panel2: #1c1922;
+  --line: #2c2631;
+  --line-gold: #5c4a2c;
+  --text: #e8dfcf;
+  --muted: #958b7b;
+  --gold: #d4ae63;
+  --gold2: #f0d595;
+  --gold-deep: #8a6a30;
+  --blue: #79b8ff;
+  --red: #c8553f;
+  --green: #76b36f;
+  --radius: 4px;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sc: 'Cormorant SC', 'Cormorant Garamond', Georgia, serif;
+  --grad-gold: linear-gradient(180deg, #e6c173 0%, #9c7634 100%);
+  --grad-iron: linear-gradient(180deg, #28232e 0%, #16141b 100%);
+  --grad-arcane: linear-gradient(180deg, #16253b 0%, #0e1726 100%);
+  --grad-danger: linear-gradient(180deg, #3b1712 0%, #22100d 100%);
+}
+
+body { font-family: var(--font-body); font-size: 13px; background: var(--bg); color: var(--text); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; letter-spacing: .01em; }
+h4 { font-family: var(--font-sc); font-weight: 700; font-size: 15px; letter-spacing: .1em; text-transform: none; color: var(--gold); margin: 16px 0 8px; }
+::selection { background: #d4ae6355; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0c0b10; }
+::-webkit-scrollbar-thumb { background: #2e2834; border: 2px solid #0c0b10; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-deep); }
+
+/* ---------- верхняя панель ---------- */
+.topbar {
+  height: 52px; gap: 18px;
+  background: linear-gradient(180deg, #1a1720 0%, #0f0e13 100%);
+  border-bottom: 1px solid var(--line-gold);
+  box-shadow: 0 1px 0 #00000080, 0 6px 18px #0008;
+}
+.brand { font-family: var(--font-sc); font-size: 19px; font-weight: 700; letter-spacing: .04em; color: var(--gold2); }
+.logo-img { width: 26px; height: 26px; vertical-align: -7px; box-shadow: 0 0 10px #d4ae6355; }
+.tabs { gap: 6px; }
+.tabs button { position: relative; font-weight: 500; font-size: 13px; padding: 0 12px; border-bottom: 0; }
+.tabs button::after { content: ''; position: absolute; left: 12px; right: 12px; bottom: 0; height: 2px; background: transparent; }
+.tabs button.on { color: var(--gold2); font-weight: 600; }
+.tabs button.on::after { background: linear-gradient(90deg, var(--gold2), var(--gold)); box-shadow: 0 0 8px #d4ae63aa; }
+
+.profile-chip {
+  background: #d4ae631a; border: 1px solid #d4ae6373; color: var(--gold2);
+  border-radius: 16px; padding: 4px 14px; font-weight: 500;
+}
+.profile-chip:hover { background: #d4ae632e; box-shadow: 0 0 10px #d4ae6333; }
+
+/* ---------- кнопки ---------- */
+.btn {
+  background: var(--grad-iron); border: 1px solid #5a4a32; color: var(--gold2);
+  border-radius: var(--radius); padding: 7px 14px; font-weight: 600; font-size: 12.5px; letter-spacing: .02em;
+  box-shadow: inset 0 1px 0 #ffffff10, 0 1px 2px #0008;
+  transition: border-color .15s, box-shadow .15s, filter .15s;
+}
+.btn:hover:not(:disabled) { border-color: var(--gold); color: #fff1cc; box-shadow: inset 0 1px 0 #ffffff14, 0 0 10px #d4ae6333; }
+.btn:active:not(:disabled) { filter: brightness(.9); }
+.btn.primary {
+  background: var(--grad-gold); border-color: #f6dc9e; color: #1b130a;
+  box-shadow: inset 0 1px 0 #fff6, 0 0 14px #d4ae6359;
+}
+.btn.primary:hover:not(:disabled) { filter: brightness(1.08); color: #120c05; box-shadow: inset 0 1px 0 #fff8, 0 0 18px #d4ae6380; }
+.btn.import-btn, .top-actions .btn.import-btn {
+  background: var(--grad-arcane); border-color: #3f6ea3; color: #b3dbff; box-shadow: 0 0 10px #79b8ff2e;
+}
+.btn.import-btn:hover:not(:disabled) { border-color: var(--blue) !important; color: #e3f4ff !important; box-shadow: 0 0 14px #79b8ff55; }
+.btn.danger { background: var(--grad-danger); border-color: #8a3a2c; color: #ffbcac; }
+.btn.danger:hover:not(:disabled) { border-color: #d0614b; color: #ffd8cf; box-shadow: 0 0 10px #c8553f44; }
+.btn.ghost { background: none; border-color: transparent; box-shadow: none; color: var(--muted); }
+.btn.ghost:hover { color: var(--gold2); }
+.btn:disabled { opacity: .4; }
+
+/* верхние действия: компактнее */
+.top-actions .btn { padding: 6px 12px; font-size: 12px; }
+.top-actions .btn.primary { background: var(--grad-iron); border-color: #5a4a32; color: var(--gold2); box-shadow: inset 0 1px 0 #ffffff10, 0 1px 2px #0008; }
+.top-actions .btn.primary:hover:not(:disabled) { border-color: var(--gold); color: #fff1cc; filter: none; box-shadow: 0 0 10px #d4ae6333; }
+
+/* ---------- поля ввода ---------- */
+input.search, .tree-name, .link-input, .notes, .field input, .tb-select, .prof-search {
+  background: #0c0b10; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: inset 0 1px 3px #000a; color: var(--text);
+}
+input.search:focus, .tree-name:focus, .link-input:focus, .notes:focus, .field input:focus, .tb-select:focus, .prof-search:focus-within {
+  border-color: var(--gold); box-shadow: 0 0 0 1px #d4ae6333, 0 0 10px #d4ae6340; outline: none;
+}
+input::placeholder, textarea::placeholder { color: #6f675c; }
+.tree-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--gold2); padding: 4px 10px; }
+.field span { font-weight: 600; color: var(--text); }
+.check input { accent-color: var(--gold); }
+
+/* ---------- боковые панели ---------- */
+.atlas-side, .docs-side { background: var(--panel); border-right: 1px solid var(--line); box-shadow: inset -1px 0 0 #00000060; }
+.side-tabs { border-bottom: 1px solid var(--line); padding: 0 6px; }
+.side-tabs button { position: relative; font-weight: 500; border-bottom: 0; }
+.side-tabs button.on { color: var(--gold2); font-weight: 600; }
+.side-tabs button.on::after { content: ''; position: absolute; left: 25%; right: 25%; bottom: -1px; height: 2px; background: linear-gradient(90deg, var(--gold2), var(--gold)); box-shadow: 0 0 8px #d4ae63aa; }
+.tree-item { border-radius: 6px; padding: 9px 30px 9px 12px; margin-bottom: 2px; }
+.tree-item:hover { background: #ffffff07; }
+.tree-item.on { background: #d4ae631a; border-color: #d4ae6366; box-shadow: inset 0 1px 0 #d4ae6326; }
+.tree-item.on .tree-item-name { color: var(--gold2); }
+.tree-item-name { font-weight: 500; }
+.chip { border-radius: 12px; background: #ffffff08; border-color: #ffffff14; }
+.chip-keystone { border-color: var(--gold); color: var(--gold2); background: #d4ae6314; }
+.stat-line { color: #a9bce0; }
+
+/* ---------- атлас ---------- */
+.atlas-toolbar, .docs-header { background: var(--panel); border-bottom: 1px solid var(--line); gap: 10px; padding: 9px 12px; }
+.points {
+  background: linear-gradient(180deg, #2d2414, #1d170d); border: 1px solid #7a5f2c; color: var(--muted);
+  font-size: 13px; padding: 3px 12px; box-shadow: inset 0 1px 0 #ffffff12;
+}
+.points b { font-family: var(--font-display); font-size: 21px; font-weight: 700; color: var(--gold2); vertical-align: -2px; }
+.points.over { background: linear-gradient(180deg, #3b1712, #22100d); border-color: #8a3a2c; }
+.points.over b { color: #ffbcac; }
+.temp-banner { background: linear-gradient(90deg, #142236, #0f1828); color: #bfe3ff; border-bottom: 1px solid #2c4a6e; }
+.atlas-zoom button { background: var(--grad-iron); border: 1px solid #5a4a32; color: var(--gold2); border-radius: var(--radius); }
+.atlas-zoom button:hover { border-color: var(--gold); box-shadow: 0 0 10px #d4ae6344; }
+.atlas-tip { border: 1px solid #6b5530; border-radius: 3px; box-shadow: 0 8px 30px #000c, 0 0 0 1px #000; }
+.tip-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; letter-spacing: .02em; }
+
+/* ---------- модальные окна ---------- */
+.modal-back { background: #05050799; backdrop-filter: blur(2px); }
+.modal {
+  background: linear-gradient(180deg, #1b1820 0%, #131117 100%);
+  border: 1px solid var(--line-gold); border-radius: 8px;
+  box-shadow: 0 0 0 1px #000, inset 0 1px 0 #d4ae6326, 0 20px 60px #000d;
+}
+.modal h3 { font-family: var(--font-display); font-size: 24px; color: var(--gold2); margin-bottom: 10px; }
+.variant-btn, .recv-item { background: var(--grad-iron); border-color: #3a323f; }
+.variant-btn:hover { border-color: var(--gold); }
+.variant-btn.on { border-color: var(--gold); background: #d4ae6324; }
+.link-preview { background: #0c0b10; color: var(--blue); }
+.share-label { font-family: var(--font-sc); font-size: 14px; letter-spacing: .06em; }
+
+/* ---------- тосты ---------- */
+.toast { border-radius: 6px; background: linear-gradient(180deg, #1e2a1e, #152015); border-color: #3f6a3f; box-shadow: 0 6px 24px #000c; }
+.toast.warn { background: linear-gradient(180deg, #2e2714, #211b0d); border-color: #7a6326; }
+.toast.err { background: linear-gradient(180deg, #2e1714, #200f0d); border-color: #8a3a2c; }
+
+/* ---------- переключатель языка ---------- */
+.lang-switch { border-color: #3a323f; border-radius: var(--radius); }
+.lang-switch button { background: #16141b; letter-spacing: .08em; }
+.lang-switch button.on { background: var(--grad-gold); color: #1b130a; }
+
+/* ---------- экран профилей ---------- */
+.profile-screen { background: radial-gradient(ellipse at 50% -10%, #2a2114 0%, #120f0b 35%, var(--bg) 70%); }
+.prof-brand { font-family: var(--font-display); font-size: 30px; font-weight: 700; color: var(--gold2); letter-spacing: .01em; margin: 6px 0 16px; text-shadow: 0 0 18px #d4ae6333; }
+.prof-brand .logo-img { width: 38px; height: 38px; vertical-align: -9px; }
+.prof-panel { gap: 10px; }
+.prof-actions .btn { padding: 7px 14px; }
+.prof-search { padding: 0 12px; }
+.prof-crumbs { background: var(--panel); border-color: var(--line); }
+.crumb { background: var(--grad-iron); border-color: #3a323f; color: var(--text); }
+.crumb:hover { border-color: var(--gold); color: var(--gold2); }
+.prof-list { background: #08080b; border-color: var(--line); box-shadow: inset 0 2px 8px #000a; }
+.prof-row { padding: 10px 14px; border-bottom: 1px solid #ffffff0a; border-left: 3px solid transparent; }
+.prof-row:hover { background: #ffffff06; }
+.prof-row.on { background: linear-gradient(90deg, #d4ae6326, #d4ae630d); outline: none; border-left-color: var(--gold); }
+.prof-row.on .prof-name { color: var(--gold2); }
+.prof-row.folder .prof-name { color: var(--gold); font-weight: 600; }
+.prof-name { font-weight: 500; }
+.prof-sub { color: #9fb8ff; }
+
+/* ---------- документы ---------- */
+.docs-new .btn { padding: 8px 10px; }
+.toolbar { background: var(--panel2); border-bottom: 1px solid var(--line); }
+.tb { border-radius: var(--radius); color: var(--text); }
+.tb:hover { background: #ffffff0d; }
+.tb.on { background: #d4ae632a; border-color: #d4ae6366; color: var(--gold2); }
+.page-scroll { background: radial-gradient(ellipse at 50% 0%, #1d1912 0%, #121016 60%); }
+.page { border-radius: 3px; box-shadow: 0 0 0 1px #0006, 0 10px 40px #000a; }
+.page .ProseMirror { font-family: var(--font-body); }
+.page .ProseMirror h1, .page .ProseMirror h2, .page .ProseMirror h3 { font-family: var(--font-display); font-weight: 700; color: #2a1f0e; }
+.page .ProseMirror h1 { font-size: 34px; }
+.page .ProseMirror h2 { font-size: 26px; }
+.page .ProseMirror h3 { font-size: 21px; }
+.empty h2 { font-size: 30px; color: var(--gold2); }
+
+/* ---------- плотная верхняя панель: ничего не переносится ---------- */
+.topbar { gap: 14px; padding: 0 12px; }
+.brand, .profile-chip, .tabs, .top-actions, .lang-switch { flex-shrink: 0; }
+.tabs button { white-space: nowrap; }
+.profile-chip { max-width: 220px; }
+.top-actions .btn { white-space: nowrap; }
+@media (max-width: 1500px) {
+  .topbar { gap: 10px; }
+  .brand { font-size: 17px; }
+  .tabs button { padding: 0 9px; font-size: 12.5px; }
+  .top-actions { gap: 5px; }
+  .top-actions .btn { padding: 5px 9px; font-size: 11.5px; }
+}
+@media (max-width: 1280px) {
+  .brand .brand-text { display: none; }
+  .profile-chip { max-width: 140px; }
+}

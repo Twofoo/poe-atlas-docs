@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Дерево атласа — PoE Atlas Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body { background: #0b0b0f; color: #ddd6c8; font: 15px/1.5 'Segoe UI', sans-serif; display: flex; min-height: 100vh; align-items: center; justify-content: center; margin: 0; }
+  .card { max-width: 520px; padding: 28px; border: 1px solid #4a4038; border-radius: 10px; background: #131218; text-align: center; }
+  h1 { color: #e9c983; font-size: 20px; margin-top: 0; }
+  a.btn { display: inline-block; margin-top: 12px; padding: 10px 18px; border-radius: 6px; background: #5a4520; color: #f3dfb0; text-decoration: none; border: 1px solid #7a5f2c; }
+  code { word-break: break-all; font-size: 12px; color: #8fd3ff; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Открываем дерево атласа…</h1>
+  <p>Если приложение <b>PoE Atlas Docs</b> установлено, оно откроется автоматически.</p>
+  <a class="btn" id="open" href="#">Открыть в приложении</a>
+  <p style="margin-top:18px">Или скопируйте ссылку и вставьте её в приложении (вкладка «Ссылки»):<br /><code id="code"></code></p>
+</div>
+<script>
+  // Страница-переадресация: https://…/open.html#<код> -> poeatlas://t/<код>
+  var code = location.hash.slice(1);
+  var link = 'poeatlas://t/' + code;
+  document.getElementById('open').href = link;
+  document.getElementById('code').textContent = link;
+  if (code) location.href = link;
+</script>
+</body>
+</html>
