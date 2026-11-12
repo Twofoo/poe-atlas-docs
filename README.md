@@ -108,7 +108,39 @@ Fonts are bundled, so the app works fully offline.
 2. The app is not code-signed yet, so Windows SmartScreen may show *“Windows protected your PC”*.
    Click **More info → Run anyway**.
 
-Updating is safe: install the new version over the old one — your profiles, trees and documents are stored separately.
+Updating is safe: install the new version over the old one. Your profiles, trees and documents are stored separately.
+
+### Verifying your download
+
+Every release ships a `SHA256SUMS.txt` next to the installers. To check that the file you downloaded
+is the one that was built:
+
+```powershell
+Get-FileHash ".\PoE Atlas Docs Setup 1.0.1.exe" -Algorithm SHA256
+```
+
+Compare the hash with `SHA256SUMS.txt`. The releases are built in GitHub Actions, so you can also
+check the build provenance:
+
+```bash
+gh attestation verify "PoE Atlas Docs Setup 1.0.1.exe" --repo Twofoo/poe-atlas-docs
+```
+
+## Code signing policy
+
+Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
+
+- Committers and reviewers: [@Twofoo](https://github.com/Twofoo)
+- Approvers: [@Twofoo](https://github.com/Twofoo)
+
+## Privacy
+
+This program will not transfer any information to other networked systems unless specifically requested
+by the user or the person installing or operating it.
+
+Profiles, trees and documents are stored locally in `%APPDATA%\PoE Atlas Docs\storage`. The optional
+short-link service receives only the encoded tree or profile package when you choose to create or open a
+short link. There is no telemetry and no account. See [PRIVACY.md](PRIVACY.md) for details.
 
 ## How to use
 
