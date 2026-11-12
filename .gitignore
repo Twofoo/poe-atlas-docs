@@ -6,3 +6,4 @@ release/
 server/.wrangler/
 scripts/i18n-keys.json
 build/_*.png
+launch-posts.md
