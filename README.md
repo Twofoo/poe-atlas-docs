@@ -15,6 +15,7 @@
 
 <p align="center">
   <a href="../../releases/latest"><b>⬇ Download for Windows</b></a> ·
+  <a href="#verify-your-download">Verify</a> ·
   <a href="#features">Features</a> ·
   <a href="#screenshots">Screenshots</a> ·
   <a href="#sharing-links">Sharing</a> ·
@@ -39,6 +40,25 @@ It combines three things that usually live in different browser tabs:
 
 Everything is organised into **profiles** (one per league, character or strategy), just like the build list in Path of Building.
 The interface is available in **English and Russian**.
+
+## Verify your download
+
+| File | SHA-256 | VirusTotal |
+| --- | --- | --- |
+| `PoE.Atlas.Docs.1.0.2.Portable.exe` | `66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838` | [report](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838) |
+| `PoE.Atlas.Docs.Setup.1.0.2.exe` | `5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee` | [report](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee) |
+
+The hashes match `SHA256SUMS.txt` in the release. Check your file:
+
+```powershell
+Get-FileHash ".\PoE.Atlas.Docs.Setup.1.0.2.exe" -Algorithm SHA256
+```
+
+Releases are built in GitHub Actions, so the build provenance can be verified too:
+
+```bash
+gh attestation verify "PoE.Atlas.Docs.Setup.1.0.2.exe" --repo Twofoo/poe-atlas-docs
+```
 
 ## Features
 
@@ -100,27 +120,6 @@ Fonts are bundled, so the app works fully offline.
    Click **More info → Run anyway**.
 
 Updating is safe: install the new version over the old one. Your profiles, trees and documents are stored separately.
-
-### Verifying your download
-
-Every release ships a `SHA256SUMS.txt` next to the installers. To check that the file you downloaded
-is the one that was built:
-
-```powershell
-Get-FileHash ".\PoE.Atlas.Docs.Setup.1.0.2.exe" -Algorithm SHA256
-```
-
-Compare the hash with `SHA256SUMS.txt`. The releases are built in GitHub Actions, so you can also
-check the build provenance:
-
-```bash
-gh attestation verify "PoE.Atlas.Docs.Setup.1.0.2.exe" --repo Twofoo/poe-atlas-docs
-```
-
-VirusTotal reports for the 1.0.2 binaries (the hashes match `SHA256SUMS.txt`):
-
-- [Portable build](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838)
-- [Installer](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee)
 
 ## Privacy
 

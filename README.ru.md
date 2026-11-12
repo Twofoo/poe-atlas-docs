@@ -15,6 +15,7 @@
 
 <p align="center">
   <a href="../../releases/latest"><b>⬇ Скачать для Windows</b></a> ·
+  <a href="#проверка-загрузки">Проверка</a> ·
   <a href="#возможности">Возможности</a> ·
   <a href="#скриншоты">Скриншоты</a> ·
   <a href="#ссылки-для-обмена">Ссылки</a> ·
@@ -39,6 +40,25 @@
 
 Всё организовано в **профили** (по одному на лигу, персонажа или стратегию), как список билдов в Path of Building.
 Интерфейс доступен на **русском и английском**.
+
+## Проверка загрузки
+
+| Файл | SHA-256 | VirusTotal |
+| --- | --- | --- |
+| `PoE.Atlas.Docs.1.0.2.Portable.exe` | `66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838` | [отчёт](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838) |
+| `PoE.Atlas.Docs.Setup.1.0.2.exe` | `5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee` | [отчёт](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee) |
+
+Хеши совпадают с `SHA256SUMS.txt` в релизе. Проверка файла:
+
+```powershell
+Get-FileHash ".\PoE.Atlas.Docs.Setup.1.0.2.exe" -Algorithm SHA256
+```
+
+Релизы собираются в GitHub Actions, происхождение сборки тоже можно проверить:
+
+```bash
+gh attestation verify "PoE.Atlas.Docs.Setup.1.0.2.exe" --repo Twofoo/poe-atlas-docs
+```
 
 ## Возможности
 
@@ -100,26 +120,6 @@
    Нажмите **Подробнее → Выполнить в любом случае**.
 
 Обновляться безопасно: ставьте новую версию поверх старой. Профили, деревья и документы хранятся отдельно.
-
-### Проверка загрузки
-
-В каждом релизе рядом с установщиками лежит `SHA256SUMS.txt`. Чтобы проверить, что скачан именно тот файл,
-который был собран:
-
-```powershell
-Get-FileHash ".\PoE.Atlas.Docs.Setup.1.0.2.exe" -Algorithm SHA256
-```
-
-Сверьте хеш с `SHA256SUMS.txt`. Релизы собираются в GitHub Actions, поэтому можно проверить и происхождение сборки:
-
-```bash
-gh attestation verify "PoE.Atlas.Docs.Setup.1.0.2.exe" --repo Twofoo/poe-atlas-docs
-```
-
-Отчёты VirusTotal для сборок 1.0.2 (хеши совпадают с `SHA256SUMS.txt`):
-
-- [Portable-версия](https://www.virustotal.com/gui/file/66b3a9dfc2c12988cb25d4d4538aa3dc7cbbc0af0a2dce094eb374cc49870838)
-- [Установщик](https://www.virustotal.com/gui/file/5ffbb4ddef9074e54dd612646e6fbb8bcd643462fcadd10f9b369a20562e5bee)
 
 ## Приватность
 
